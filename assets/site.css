@@ -329,3 +329,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 .gcbtn:hover small,.gcbtn:hover em{color:#fff}
 svg.chart .ln.p3{stroke:var(--hot)}svg.chart .ln.ft{stroke:#8b5cf6}svg.chart .pt.p3{stroke:var(--hot)}svg.chart .pt.ft{stroke:#8b5cf6}
 .ptrends .card{min-width:0}
+.shgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:4px 24px}
+.shrow{display:grid;grid-template-columns:minmax(90px,1fr) auto 44px;grid-template-areas:"l v p" "b b b";align-items:baseline;gap:2px 10px;padding:6px 0;border-bottom:1px solid var(--line)}
+.shl{grid-area:l;font-size:13px}.shv{grid-area:v;font-size:13px}.shp{grid-area:p;text-align:right;font-weight:700;font-size:13px;color:var(--accent)}
+.shrow .bar{grid-area:b;margin-top:4px}
