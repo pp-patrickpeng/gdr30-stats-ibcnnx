@@ -69,3 +69,9 @@ d.querySelectorAll('.plsel').forEach(function(s){s.addEventListener('change',fun
 var ss=d.getElementById('seasonsel');if(ss){ss.addEventListener('change',function(){d.querySelectorAll('[data-season]').forEach(function(p){p.hidden=p.getAttribute('data-season')!==ss.value})})}
 })();
 (function(){var d=document;d.querySelectorAll('.langbtn').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('gdr-lang-v2',a.getAttribute('data-lang'))}catch(e){}})})})();
+(function(){var d=document;d.querySelectorAll('[data-shotc]').forEach(function(c){
+  var h='all',p='all',bs=[].slice.call(c.querySelectorAll('.seg button')),s=c.querySelector('select.shp');
+  function ap(){c.querySelectorAll('.mk,.ms').forEach(function(e){var ok=(h==='all'||e.getAttribute('data-h')===h)&&(p==='all'||e.getAttribute('data-p')===p);e.style.display=ok?'':'none'})}
+  bs.forEach(function(b){b.addEventListener('click',function(){h=b.getAttribute('data-opt');ap()})});
+  if(s)s.addEventListener('change',function(){p=s.value;ap()});
+})})();
