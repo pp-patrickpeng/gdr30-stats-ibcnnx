@@ -342,3 +342,10 @@ td.ind{width:28px;text-align:center}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]) .up{color:#4ade80}:root:not([data-theme=light]) .dn{color:#fbbf24}}
 .langbtn{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:34px;padding:0 10px;margin-right:8px;border-radius:999px;border:1px solid var(--line);font-size:13px;font-weight:700;text-decoration:none;color:inherit}
 .langbtn:hover{border-color:var(--accent);color:var(--accent)}
+/* centered scores */
+.gcard .gsc{justify-content:center;flex-wrap:wrap;row-gap:2px}
+.gcard .gsc .mg{flex-basis:100%;margin-left:0;text-align:center}
+.gcard .opp{text-align:center}
+.score{justify-content:center}
+.score .team{text-align:center}
+.board .team{text-align:center;display:flex;flex-direction:column;align-items:center}
