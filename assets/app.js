@@ -64,3 +64,7 @@ var q=d.getElementById('gq');
 if(q){q.addEventListener('input',function(){var v=q.value.trim().toLowerCase(),n=0;d.querySelectorAll('.gterm').forEach(function(t){var on=!v||t.textContent.toLowerCase().indexOf(v)>-1;t.hidden=!on;if(on)n++});
   d.querySelectorAll('[data-ggroup]').forEach(function(g){g.hidden=!g.querySelector('.gterm:not([hidden])')});var c=d.getElementById('gcnt');if(c)c.textContent=n+' terms'})}
 })();
+(function(){var d=document;
+d.querySelectorAll('.plsel').forEach(function(s){s.addEventListener('change',function(){location.href=s.value})});
+var ss=d.getElementById('seasonsel');if(ss){ss.addEventListener('change',function(){d.querySelectorAll('[data-season]').forEach(function(p){p.hidden=p.getAttribute('data-season')!==ss.value})})}
+})();

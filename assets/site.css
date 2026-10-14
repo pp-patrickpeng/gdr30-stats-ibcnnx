@@ -310,3 +310,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 @media (max-width:620px){.kgrid{gap:10px}.kgrid .card{padding:14px}.kpi .kv{font-size:24px}}
 @media (max-width:520px){.g4{grid-template-columns:1fr}}
 .gcard>.chip{align-self:flex-start}
+.pick{display:inline-flex;align-items:center;gap:8px}
+.pick select{font:inherit;font-weight:700;font-size:14px;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 12px;cursor:pointer}
+.pick select:hover,.pick select:focus{border-color:var(--accent);outline:none}
+.boxfold{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
+.boxfold summary{cursor:pointer;font-weight:700;padding:6px 0;list-style-position:inside}
+.boxfold summary:hover{color:var(--accent)}
+.boxfold .tablewrap{margin-top:10px}
