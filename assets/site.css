@@ -319,3 +319,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 .boxfold .tablewrap{margin-top:10px}
 .cardlink{display:inline-block;margin-left:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 7px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--muted);vertical-align:middle}
 .cardlink:hover{border-color:var(--accent);color:var(--accent)}
+.cardlink{color:var(--accent);border-color:var(--accent)}
+.gcgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}
+.gcbtn{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:12px;border:1px solid var(--accent);background:var(--surface);text-decoration:none;color:var(--text)}
+.gcbtn:hover{background:var(--accent);color:#fff}
+.gcbtn small{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.gcbtn span{font-weight:700}
+.gcbtn em{font-style:normal;font-size:12px;color:var(--muted)}
+.gcbtn:hover small,.gcbtn:hover em{color:#fff}
