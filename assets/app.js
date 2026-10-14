@@ -68,4 +68,4 @@ if(q){q.addEventListener('input',function(){var v=q.value.trim().toLowerCase(),n
 d.querySelectorAll('.plsel').forEach(function(s){s.addEventListener('change',function(){location.href=s.value})});
 var ss=d.getElementById('seasonsel');if(ss){ss.addEventListener('change',function(){d.querySelectorAll('[data-season]').forEach(function(p){p.hidden=p.getAttribute('data-season')!==ss.value})})}
 })();
-(function(){var d=document;d.querySelectorAll('.langbtn').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('gdr-lang',a.getAttribute('data-lang'))}catch(e){}})})})();
+(function(){var d=document;d.querySelectorAll('.langbtn').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('gdr-lang-v2',a.getAttribute('data-lang'))}catch(e){}})})})();
