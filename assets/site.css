@@ -340,3 +340,5 @@ td.ind{width:28px;text-align:center}
 .eq{color:var(--muted);background:var(--surface2)}
 [data-theme=dark] .up{color:#4ade80}[data-theme=dark] .dn{color:#fbbf24}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]) .up{color:#4ade80}:root:not([data-theme=light]) .dn{color:#fbbf24}}
+.langbtn{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:34px;padding:0 10px;margin-right:8px;border-radius:999px;border:1px solid var(--line);font-size:13px;font-weight:700;text-decoration:none;color:inherit}
+.langbtn:hover{border-color:var(--accent);color:var(--accent)}

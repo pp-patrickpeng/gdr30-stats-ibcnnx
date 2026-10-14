@@ -1,10 +1,10 @@
 /* GD Ruse30 v2 – tiny vanilla JS: theme, tabs, segmented charts, sortable tables, tooltips, filters */
 (function(){
-var d=document,root=d.documentElement;
+var d=document,root=d.documentElement,ZH=root.lang==='zh-Hant';
 d.body.classList.remove('nojs');d.body.classList.add('js');
 /* theme toggle: auto -> light -> dark */
 var tb=d.getElementById('themebtn');
-function setT(t){if(t==='auto'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',t)}try{localStorage.setItem('gdr-theme',t)}catch(e){}if(tb)tb.setAttribute('aria-label','Theme: '+t)}
+function setT(t){if(t==='auto'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',t)}try{localStorage.setItem('gdr-theme',t)}catch(e){}if(tb)tb.setAttribute('aria-label',(ZH?'主題：':'Theme: ')+(ZH?({auto:'自動',light:'淺色',dark:'深色'})[t]:t))}
 if(tb){tb.addEventListener('click',function(){var c=root.getAttribute('data-theme')||'auto';setT(c==='auto'?'light':c==='light'?'dark':'auto')})}
 /* tabs */
 d.querySelectorAll('[role=tablist][data-tabs]').forEach(function(list){
@@ -62,9 +62,10 @@ if(ps){var pb=[].slice.call(ps.querySelectorAll('button'));pb.forEach(function(b
 /* glossary search */
 var q=d.getElementById('gq');
 if(q){q.addEventListener('input',function(){var v=q.value.trim().toLowerCase(),n=0;d.querySelectorAll('.gterm').forEach(function(t){var on=!v||t.textContent.toLowerCase().indexOf(v)>-1;t.hidden=!on;if(on)n++});
-  d.querySelectorAll('[data-ggroup]').forEach(function(g){g.hidden=!g.querySelector('.gterm:not([hidden])')});var c=d.getElementById('gcnt');if(c)c.textContent=n+' terms'})}
+  d.querySelectorAll('[data-ggroup]').forEach(function(g){g.hidden=!g.querySelector('.gterm:not([hidden])')});var c=d.getElementById('gcnt');if(c)c.textContent=ZH?(n+' 個術語'):(n+' terms')})}
 })();
 (function(){var d=document;
 d.querySelectorAll('.plsel').forEach(function(s){s.addEventListener('change',function(){location.href=s.value})});
 var ss=d.getElementById('seasonsel');if(ss){ss.addEventListener('change',function(){d.querySelectorAll('[data-season]').forEach(function(p){p.hidden=p.getAttribute('data-season')!==ss.value})})}
 })();
+(function(){var d=document;d.querySelectorAll('.langbtn').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('gdr-lang',a.getAttribute('data-lang'))}catch(e){}})})})();
