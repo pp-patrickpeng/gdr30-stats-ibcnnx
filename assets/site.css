@@ -404,3 +404,6 @@ ul.facts{list-style:none;padding:0;margin:0;display:grid;gap:8px}ul.facts li{pad
 .balls .mk circle{fill:var(--accent);stroke:var(--accent);stroke-width:.8}.balls .mk path{fill:none;stroke:var(--accent-ink);stroke-width:.6;opacity:.7}
 .balls .ms circle{fill:var(--accent-soft);stroke:var(--accent);stroke-width:.7;opacity:.45}.balls .ms path{fill:none;stroke:var(--accent);stroke-width:.45;opacity:.3}.balls.none{color:var(--muted);font-size:12px}
 .tball{width:1em;height:1em;vertical-align:-.1em;margin-right:.15em}.tball circle{fill:var(--accent)}.tball path{fill:none;stroke:var(--accent-ink);stroke-width:.6;opacity:.7}
+
+html[lang="zh-Hant"] body{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans TC","PingFang TC","Microsoft JhengHei","Noto Sans CJK TC",sans-serif;letter-spacing:.01em}
+html[lang="zh-Hant"] h1,html[lang="zh-Hant"] h2,html[lang="zh-Hant"] h3{font-weight:700;letter-spacing:.02em}
