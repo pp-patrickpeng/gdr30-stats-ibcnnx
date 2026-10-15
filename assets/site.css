@@ -424,3 +424,4 @@ html[lang="zh-Hant"] h1,html[lang="zh-Hant"] h2,html[lang="zh-Hant"] h3{font-wei
 @media(min-width:900px){.gamehl .st th,.gamehl table.st td{padding:9px 6px}.gamehl table.st{font-size:13.5px}.gamehl .st thead th{letter-spacing:0}}
 
 .record b{letter-spacing:0;display:inline-flex;align-items:baseline}.record b .rd{margin:0 .18em;font-weight:700;opacity:.85}
+.record b>span{font-size:inherit;font-weight:inherit;color:inherit;line-height:inherit;margin:0;padding:0}.record b>.rd{margin:0 .18em;font-weight:700;opacity:.85}
