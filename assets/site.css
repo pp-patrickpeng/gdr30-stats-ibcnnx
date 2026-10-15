@@ -418,3 +418,6 @@ html[lang="zh-Hant"] h1,html[lang="zh-Hant"] h2,html[lang="zh-Hant"] h3{font-wei
 .donut text{text-anchor:middle;fill:var(--text)}.donut .dtot{font-size:24px;font-weight:800;dominant-baseline:middle}.donut .dlab{font-size:10px;fill:var(--muted)}
 .pleg{flex-direction:column;gap:8px;margin-top:0;font-size:13.5px;flex:1;min-width:150px}.pleg em{font-style:normal;color:var(--muted);margin-left:4px}
 @media(max-width:420px){.pie{justify-content:center}.pleg{flex-direction:row;justify-content:center}}
+
+.hero{grid-template-columns:1fr!important}
+@media(min-width:760px){.recordcard{display:grid;grid-template-columns:minmax(260px,1fr) 1.4fr;gap:24px;align-items:center}.recordcard .herostats{margin:0}}
