@@ -359,3 +359,11 @@ svg.court .ms{stroke:var(--muted);stroke-width:3;stroke-linecap:round;fill:none;
 .legend i.miss{background:transparent;border:0;position:relative}
 .shotcard .legend i:not(.miss){border-radius:50%}
 .shotcard .legend i.miss::before{content:'×';position:absolute;left:0;top:-5px;font-style:normal;font-weight:800;color:var(--muted)}
+
+.recordcard{text-align:center}.record{justify-content:center;align-items:center;flex-wrap:wrap}.streak{justify-content:center;align-items:center}
+.herostats div{text-align:center}.emo{font-style:normal;font-size:28px;line-height:1}.streak .emo{font-size:18px}.herostats span i{font-style:normal}
+.gsec .chead h2{font-size:18px}
+.gcard.past{background:var(--surface2);box-shadow:none}
+.gcard.past .opp,.gcard.past .minis b{color:var(--muted)}
+.gcard.past .gsc .us,.gcard.past .gsc .mg,.gcard.past .gsc{color:var(--muted)}
+.gcard.past:hover{border-color:var(--muted)}
