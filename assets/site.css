@@ -398,3 +398,7 @@ ul.facts{list-style:none;padding:0;margin:0;display:grid;gap:8px}ul.facts li{pad
 .callout.good .ci{background:var(--good);color:#fff}.callout.work .ci{background:var(--warn);color:#fff}
 .callout ul{margin:0;padding-left:18px;display:grid;gap:8px;line-height:1.45}
 @media (max-width:560px){.heads{grid-template-columns:repeat(2,1fr)}.pch{padding:16px;gap:12px}.sec2{gap:8px}.st2 b{font-size:18px}}
+
+.balls{grid-column:2/-1;display:flex;flex-wrap:wrap;gap:3px;margin-top:-2px}.balls i{width:16px;height:16px;display:block}.balls.many i{width:11px;height:11px}.balls svg{width:100%;height:100%;display:block}
+.balls .mk circle{fill:#f28c28;stroke:#a24f0b;stroke-width:.8}.balls .mk path{fill:none;stroke:#7a3a06;stroke-width:.6}
+.balls .ms circle{fill:none;stroke:var(--muted);stroke-width:.8;opacity:.55}.balls .ms path{fill:none;stroke:var(--muted);stroke-width:.5;opacity:.4}.balls.none{color:var(--muted);font-size:12px}
