@@ -412,3 +412,9 @@ html[lang="zh-Hant"] h1,html[lang="zh-Hant"] h2,html[lang="zh-Hant"] h3{font-wei
 .chip2[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--text)}
 
 .legend i.miss{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--faint) 60%,transparent) 0 2px,transparent 2px 4px);border:0}.shotcard .legend i.miss{background:none}
+
+.pie{display:flex;align-items:center;gap:20px;flex-wrap:wrap}.donut{width:150px;height:150px;flex:none}
+.donut circle{fill:none;stroke-width:20}.donut .dtrk{stroke:var(--surface2)}.donut .s2{stroke:var(--accent)}.donut .s3{stroke:var(--hot)}.donut .sft{stroke:#8b5cf6}
+.donut text{text-anchor:middle;fill:var(--text)}.donut .dtot{font-size:24px;font-weight:800;dominant-baseline:middle}.donut .dlab{font-size:10px;fill:var(--muted)}
+.pleg{flex-direction:column;gap:8px;margin-top:0;font-size:13.5px;flex:1;min-width:150px}.pleg em{font-style:normal;color:var(--muted);margin-left:4px}
+@media(max-width:420px){.pie{justify-content:center}.pleg{flex-direction:row;justify-content:center}}
