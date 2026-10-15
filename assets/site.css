@@ -421,3 +421,4 @@ html[lang="zh-Hant"] h1,html[lang="zh-Hant"] h2,html[lang="zh-Hant"] h3{font-wei
 
 .hero{grid-template-columns:1fr!important}
 @media(min-width:760px){.recordcard{display:grid;grid-template-columns:minmax(260px,1fr) 1.4fr;gap:24px;align-items:center}.recordcard .herostats{margin:0}}
+@media(min-width:900px){.gamehl .st th,.gamehl table.st td{padding:9px 6px}.gamehl table.st{font-size:13.5px}.gamehl .st thead th{letter-spacing:0}}
