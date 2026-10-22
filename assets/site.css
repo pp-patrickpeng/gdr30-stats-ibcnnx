@@ -390,12 +390,10 @@ ul.facts{list-style:none;padding:0;margin:0;display:grid;gap:8px}ul.facts li{pad
 .sec2{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px}
 .st2{text-align:center;padding:10px 6px;border-radius:12px;background:var(--surface2)}.st2 b{font-size:20px;font-weight:800}.st2 em{font-style:normal;color:var(--faint);margin:0 3px}.st2 span{display:block;font-size:11.5px;color:var(--muted);font-weight:600;margin-top:2px}
 .pcard2>details.howinfo{margin:0 16px 16px}
-.callout{border-radius:var(--r);padding:16px 18px;border:1px solid var(--line);background:var(--surface)}
-.callout.good{border-left:4px solid var(--good);background:linear-gradient(90deg,var(--good-soft),transparent 60%),var(--surface)}
-.callout.work{border-left:4px solid var(--warn);background:linear-gradient(90deg,var(--warn-soft),transparent 60%),var(--surface)}
-.callout h3{display:flex;align-items:center;gap:8px;margin-bottom:10px}.ci{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;font-size:14px;font-weight:900}
-.callout.good .ci{background:var(--good);color:#fff}.callout.work .ci{background:var(--warn);color:#fff}
-.callout ul{margin:0;padding-left:18px;display:grid;gap:8px;line-height:1.45}
+.player-notes{align-items:start}
+.player-notes .player-notes__card h3{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.player-notes .player-notes__icon{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;font-size:14px;font-weight:900;background:var(--accent-soft);color:var(--accent);flex:none}
+.player-notes .player-notes__card ul{margin:0;padding-left:18px;display:grid;gap:8px;line-height:1.45}
 @media (max-width:560px){.heads{grid-template-columns:repeat(2,1fr)}.pch{padding:16px;gap:12px}.sec2{gap:8px}.st2 b{font-size:18px}}
 
 .srow{grid-template-columns:34px 56px 1fr 56px}.srow .sp{grid-column:4}
@@ -458,9 +456,8 @@ html[lang="zh-Hant"] h1,html[lang="zh-Hant"] h2,html[lang="zh-Hant"] h3{font-wei
 .recap-story .recap-story__welcome .recap-story__icon{width:42px;height:42px;padding:9px;border-radius:13px;background:var(--accent);color:var(--accent-ink);flex:none}
 .recap-story .recap-story__kicker{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:5px}
 .recap-story .recap-story__welcome p{font-size:16px;font-weight:650;line-height:1.65;position:relative}
-.recap-story .recap-story__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.recap-story .recap-story__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
 .recap-story .recap-story__item{min-width:0;padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
-.recap-story .recap-story__item--halves,.recap-story .recap-story__item--shooting{grid-column:1/-1}
 .recap-story .recap-story__item--halves{background:linear-gradient(110deg,var(--accent-soft),var(--surface) 70%)}
 .recap-story .recap-story__top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
 .recap-story .recap-story__icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;color:var(--accent);flex:none}
@@ -470,14 +467,24 @@ html[lang="zh-Hant"] h1,html[lang="zh-Hant"] h2,html[lang="zh-Hant"] h3{font-wei
 .recap-story .recap-story__chip b{white-space:nowrap;font-size:32px;font-weight:850;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
 .recap-story .recap-story__chip span{font-size:11px;line-height:1.35;font-weight:650;color:var(--muted);margin-top:5px}
 .recap-story .recap-story__body>p{font-size:14px;line-height:1.75;max-width:64ch}
+.recap-story .recap-story__points{flex:1;min-width:0}
+.recap-story .recap-story__points-track{display:flex;height:22px;border-radius:999px;overflow:hidden;background:var(--line)}
+.recap-story .recap-story__points-segment{display:block;flex:none;border:0;border-radius:0}
+.recap-story .recap-story__points--2pt{background:var(--accent)}
+.recap-story .recap-story__points--3pt{background:var(--hot)}
+.recap-story .recap-story__points--ft{background:#8b5cf6}
+.recap-story .recap-story__points-legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px;font-size:12px;font-variant-numeric:tabular-nums}
+.recap-story .recap-story__points-label{display:flex;align-items:center;gap:5px;color:var(--muted);font-weight:650}
+.recap-story .recap-story__points-swatch{width:8px;height:8px;flex:none;border-radius:2px}
+.recap-story .recap-story__points-key b{display:block;margin-top:3px;white-space:nowrap}
 .recap-story .recap-story__shooting{margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
 .recap-story .recap-story__legend{font-size:11px;color:var(--muted);margin-bottom:10px}
-.recap-story .recap-story__shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.recap-story .recap-story__shot-top{display:flex;align-items:baseline;gap:10px;font-size:12px;font-variant-numeric:tabular-nums;margin-bottom:7px}
-.recap-story .recap-story__shot-top b{margin-left:auto;font-size:14px}
-.recap-story .recap-story__shot-top>span:last-child{color:var(--muted)}
-.recap-story .recap-story__track{height:9px;border-radius:99px;overflow:hidden;background:repeating-linear-gradient(120deg,var(--surface2) 0 4px,var(--line) 4px 5px)}
-.recap-story .recap-story__track>span{display:block;height:100%;background:var(--accent);border:0;border-radius:0}
+.recap-story .recap-story__shots{display:grid;gap:10px}
+.recap-story .recap-story__shot{display:grid;grid-template-columns:34px 56px minmax(0,1fr) 56px;gap:10px;align-items:center;font-size:13px;font-variant-numeric:tabular-nums}
+.recap-story .recap-story__shot-label{font-weight:800;color:var(--muted)}
+.recap-story .recap-story__shot-count{font-weight:750}
+.recap-story .recap-story__shot-percent{text-align:right;color:var(--muted)}
+.recap-story .recap-story__shot .balls{flex-wrap:nowrap}
 @media(max-width:600px){
  .recap-story .recap-story__grid{grid-template-columns:minmax(0,1fr);gap:12px}
  .recap-story .recap-story__welcome{padding:16px;gap:12px;align-items:flex-start}
@@ -490,5 +497,7 @@ html[lang="zh-Hant"] h1,html[lang="zh-Hant"] h2,html[lang="zh-Hant"] h3{font-wei
  .recap-story .recap-story__item--halves .recap-story__chip{min-width:92px;max-width:100px}
  .recap-story .recap-story__item--halves .recap-story__chip b{font-size:25px}
  .recap-story .recap-story__body>p{font-size:13px;line-height:1.7}
- .recap-story .recap-story__shots{grid-template-columns:minmax(0,1fr);gap:14px}
+ .recap-story .recap-story__shot{grid-template-columns:30px 44px minmax(0,1fr) 44px;gap:6px;font-size:12px}
+ .recap-story .recap-story__shot .balls{gap:2px}
+ .recap-story .recap-story__shot .balls i{width:12px;height:12px;flex:none}
 }
