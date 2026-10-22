@@ -87,18 +87,19 @@ a.more:hover{text-decoration:underline}
 /* hero */
 .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:16px;margin-top:22px}
 @media (max-width:900px){.hero{grid-template-columns:1fr}}
-.recordcard{position:relative;overflow:hidden;background:radial-gradient(120% 140% at 100% 0%,rgba(47,240,214,.25),transparent 55%),linear-gradient(135deg,#0d1a30,#0a1222);color:#e8eef7;border:1px solid #1f2d47}
-.recordcard .eyebrow{color:#8fa3bd}
-.record{display:flex;align-items:baseline;gap:14px;margin:8px 0 4px}
-.record b{font-size:clamp(56px,9vw,84px);font-weight:850;letter-spacing:-.04em;line-height:1;color:#fff}
-.record span{font-size:15px;color:#9fb3cc;font-weight:600}
-.streak{display:flex;gap:8px;margin:14px 0 16px}
-.wl{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:800;font-size:14px;background:#2ff0d6;color:#04201d;text-decoration:none}
-.wl.l{background:#f87171;color:#2a0505}
-.herostats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.herostats div{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px 12px}
-.herostats b{display:block;font-size:22px;font-weight:800;color:#fff}
-.herostats span{font-size:12px;color:#9fb3cc}
+/* Season record: inherit the standard card surface and theme colours. */
+.season-record{text-align:center;color:var(--text)}
+.season-record .season-record__score{margin:8px 0 4px}
+.season-record .season-record__score b{display:inline-flex;align-items:baseline;font-size:clamp(56px,9vw,84px);font-weight:850;letter-spacing:0;line-height:1}
+.season-record .season-record__score b>span{font-size:inherit;font-weight:inherit;color:inherit;line-height:inherit}
+.season-record .season-record__score b>.season-record__dash{margin:0 .18em;font-weight:700;opacity:.85}
+.season-record .season-record__status{display:block;font-size:15px;font-weight:600;color:var(--muted)}
+.season-record .season-record__stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}
+.season-record .season-record__stats>div{background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.season-record .season-record__stats b{display:block;font-size:22px;font-weight:800}
+.season-record .season-record__stats span{font-size:12px;color:var(--muted)}
+.season-record .season-record__stats i{font-style:normal}
+@media(min-width:760px){.season-record{display:grid;grid-template-columns:minmax(260px,1fr) 1.4fr;gap:24px;align-items:center}.season-record .season-record__stats{margin:0}}
 /* KPI tiles */
 .kpi{display:flex;flex-direction:column;gap:6px;position:relative}
 .kpi .kl{font-size:13px;color:var(--muted);font-weight:600;display:flex;align-items:center;gap:6px}
@@ -359,8 +360,6 @@ svg.court .ms{stroke:var(--muted);stroke-width:3;stroke-linecap:round;fill:none;
 .shotcard .legend i:not(.miss){border-radius:50%}
 .shotcard .legend i.miss::before{content:'×';position:absolute;left:0;top:-5px;font-style:normal;font-weight:800;color:var(--muted)}
 
-.recordcard{text-align:center}.record{justify-content:center;align-items:center;flex-wrap:wrap}.streak{justify-content:center;align-items:center}
-.herostats div{text-align:center}.emo{font-style:normal;font-size:28px;line-height:1}.streak .emo{font-size:18px}.herostats span i{font-style:normal}
 .gsec .chead h2{font-size:18px}
 .gcard.past{background:var(--surface2);box-shadow:none}
 .gcard.past .opp,.gcard.past .minis b{color:var(--muted)}
@@ -418,11 +417,8 @@ html[lang="zh-Hant"] h1,html[lang="zh-Hant"] h2,html[lang="zh-Hant"] h3{font-wei
 @media(max-width:420px){.pie{justify-content:center}.pleg{flex-direction:row;justify-content:center}}
 
 .hero{grid-template-columns:1fr!important}
-@media(min-width:760px){.recordcard{display:grid;grid-template-columns:minmax(260px,1fr) 1.4fr;gap:24px;align-items:center}.recordcard .herostats{margin:0}}
 @media(min-width:900px){.gamehl .st th,.gamehl table.st td{padding:9px 6px}.gamehl table.st{font-size:13.5px}.gamehl .st thead th{letter-spacing:0}}
 
-.record b{letter-spacing:0;display:inline-flex;align-items:baseline}.record b .rd{margin:0 .18em;font-weight:700;opacity:.85}
-.record b>span{font-size:inherit;font-weight:inherit;color:inherit;line-height:inherit;margin:0;padding:0}.record b>.rd{margin:0 .18em;font-weight:700;opacity:.85}
 
 .ftrow{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
 
