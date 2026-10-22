@@ -89,9 +89,12 @@ a.more:hover{text-decoration:underline}
 @media (max-width:900px){.hero{grid-template-columns:1fr}}
 /* Season record: inherit the standard card surface and theme colours. */
 .season-record{text-align:center;color:var(--text)}
+.season-record .season-record__summary{display:flex;flex-direction:column;align-items:center;min-width:0}
 .season-record .season-record__score{margin:8px 0 4px}
 .season-record .season-record__score b{display:inline-flex;align-items:baseline;font-size:clamp(56px,9vw,84px);font-weight:850;letter-spacing:0;line-height:1}
 .season-record .season-record__score b>span{font-size:inherit;font-weight:inherit;color:inherit;line-height:inherit}
+.season-record .season-record__score b>.rec-w{color:var(--accent)}
+.season-record .season-record__score b>.rec-l{color:var(--hot)}
 .season-record .season-record__score b>.season-record__dash{margin:0 .18em;font-weight:700;opacity:.85}
 .season-record .season-record__status{display:block;font-size:15px;font-weight:600;color:var(--muted)}
 .season-record .season-record__stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}
