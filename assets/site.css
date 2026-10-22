@@ -80,6 +80,10 @@ main{padding-bottom:48px}
 .chead h2,.chead h3{margin:0}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .muted{color:var(--muted)}.small{font-size:13px}
+.stat-good{color:var(--accent)}
+.stat-bad{color:var(--hot)}
+.rec-w{color:var(--accent)}
+.rec-l{color:var(--hot)}
 .section{margin-top:28px}
 .section>.chead{margin-bottom:12px}
 a.more{font-size:13px;font-weight:650;color:var(--accent);text-decoration:none}
@@ -124,7 +128,6 @@ a.more:hover{text-decoration:underline}
 .team{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;text-align:center;min-width:0}
 .team .tn{font-size:13px;font-weight:650;color:var(--muted)}
 .team .ts{font-size:44px;font-weight:850;letter-spacing:-.03em;line-height:1}
-.team.us .ts{color:var(--accent)}
 .score .vs{font-size:12px;font-weight:700;color:var(--faint)}
 .minis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .minis div{background:var(--surface2);border-radius:12px;padding:8px 10px;text-align:center}
@@ -174,8 +177,8 @@ a.more:hover{text-decoration:underline}
 .gcard .gtop{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .gcard .opp{font-size:19px;font-weight:800}
 .gcard .gsc{display:flex;align-items:baseline;gap:8px;font-size:34px;font-weight:850;letter-spacing:-.03em}
-.gcard .gsc .us{color:var(--accent)}.gcard .gsc .dash{color:var(--faint);font-size:24px}
-.gcard .gsc .mg{font-size:14px;font-weight:700;color:var(--good);margin-left:auto}
+.gcard .gsc .dash{color:var(--faint);font-size:24px}
+.gcard .gsc .mg{font-size:14px;font-weight:700;margin-left:auto}
 .gcard[hidden]{display:none}
 /* scoreboard hero */
 .board{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:22px}
@@ -366,7 +369,7 @@ svg.court .ms{stroke:var(--muted);stroke-width:3;stroke-linecap:round;fill:none;
 .gsec .chead h2{font-size:18px}
 .gcard.past{background:var(--surface2);box-shadow:none}
 .gcard.past .opp,.gcard.past .minis b{color:var(--muted)}
-.gcard.past .gsc .us,.gcard.past .gsc .mg,.gcard.past .gsc{color:var(--muted)}
+.gcard.past .gsc .stat-good,.gcard.past .gsc .stat-bad,.gcard.past .gsc .mg,.gcard.past .gsc{color:var(--muted)}
 .gcard.past:hover{border-color:var(--muted)}
 
 /* info toggle */
