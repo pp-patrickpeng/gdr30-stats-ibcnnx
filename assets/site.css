@@ -450,3 +450,45 @@ html[lang="zh-Hant"] h1,html[lang="zh-Hant"] h2,html[lang="zh-Hant"] h3{font-wei
 }
 @media(min-width:1100px){.conn-section .conn-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:420px){.conn-section .conn-grid{gap:8px}.conn-section .conn-card{padding:10px}.conn-section .chead{flex-wrap:wrap}}
+
+/* Game recap: scoped story cards, welcome banner and shooting split. */
+.gamehl .gamehl__actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.recap-story .recap-story__welcome{display:flex;align-items:center;gap:18px;margin-bottom:20px;padding:22px 24px;border:1px solid var(--accent);border-radius:14px;background:linear-gradient(115deg,var(--accent-soft),var(--surface),var(--accent-soft));position:relative;overflow:hidden}
+.recap-story .recap-story__welcome::after{content:'✦';position:absolute;right:16px;top:-24px;font-size:120px;line-height:1;color:var(--accent);opacity:.08;pointer-events:none}
+.recap-story .recap-story__welcome .recap-story__icon{width:42px;height:42px;padding:9px;border-radius:13px;background:var(--accent);color:var(--accent-ink);flex:none}
+.recap-story .recap-story__kicker{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:5px}
+.recap-story .recap-story__welcome p{font-size:16px;font-weight:650;line-height:1.65;position:relative}
+.recap-story .recap-story__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.recap-story .recap-story__item{min-width:0;padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.recap-story .recap-story__item--halves,.recap-story .recap-story__item--shooting{grid-column:1/-1}
+.recap-story .recap-story__item--halves{background:linear-gradient(110deg,var(--accent-soft),var(--surface) 70%)}
+.recap-story .recap-story__top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.recap-story .recap-story__icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;color:var(--accent);flex:none}
+.recap-story .recap-story__top h3{font-size:16px;line-height:1.4}
+.recap-story .recap-story__body{display:flex;align-items:center;gap:18px}
+.recap-story .recap-story__chip{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:none;min-width:94px;max-width:120px;min-height:78px;padding:10px 12px;background:var(--accent-soft);border-radius:12px;text-align:center}
+.recap-story .recap-story__chip b{white-space:nowrap;font-size:32px;font-weight:850;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.recap-story .recap-story__chip span{font-size:11px;line-height:1.35;font-weight:650;color:var(--muted);margin-top:5px}
+.recap-story .recap-story__body>p{font-size:14px;line-height:1.75;max-width:64ch}
+.recap-story .recap-story__shooting{margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+.recap-story .recap-story__legend{font-size:11px;color:var(--muted);margin-bottom:10px}
+.recap-story .recap-story__shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.recap-story .recap-story__shot-top{display:flex;align-items:baseline;gap:10px;font-size:12px;font-variant-numeric:tabular-nums;margin-bottom:7px}
+.recap-story .recap-story__shot-top b{margin-left:auto;font-size:14px}
+.recap-story .recap-story__shot-top>span:last-child{color:var(--muted)}
+.recap-story .recap-story__track{height:9px;border-radius:99px;overflow:hidden;background:repeating-linear-gradient(120deg,var(--surface2) 0 4px,var(--line) 4px 5px)}
+.recap-story .recap-story__track>span{display:block;height:100%;background:var(--accent);border:0;border-radius:0}
+@media(max-width:600px){
+ .recap-story .recap-story__grid{grid-template-columns:minmax(0,1fr);gap:12px}
+ .recap-story .recap-story__welcome{padding:16px;gap:12px;align-items:flex-start}
+ .recap-story .recap-story__welcome p{font-size:14px}
+ .recap-story .recap-story__item{padding:16px}
+ .recap-story .recap-story__body{gap:12px;align-items:flex-start}
+ .recap-story .recap-story__chip{min-width:78px;max-width:85px;min-height:76px;padding:10px 8px}
+ .recap-story .recap-story__chip b{font-size:28px}
+ .recap-story .recap-story__chip span{font-size:10px}
+ .recap-story .recap-story__item--halves .recap-story__chip{min-width:92px;max-width:100px}
+ .recap-story .recap-story__item--halves .recap-story__chip b{font-size:25px}
+ .recap-story .recap-story__body>p{font-size:13px;line-height:1.7}
+ .recap-story .recap-story__shots{grid-template-columns:minmax(0,1fr);gap:14px}
+}
