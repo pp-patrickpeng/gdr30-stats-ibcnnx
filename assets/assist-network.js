@@ -40,6 +40,7 @@
     let player = preferred;
     let pair = null;
     let hovered = null;
+    let keyboardPlayer = null;
     let previewPair = null;
 
     function belongs(element, name) {
@@ -156,8 +157,9 @@
     }
 
     function draw() {
-      const focusedPlayer = player ?? hovered;
-      const focusedPair = previewPair ?? pair;
+      const previewPlayer = hovered ?? keyboardPlayer;
+      const focusedPlayer = previewPlayer ?? player;
+      const focusedPair = previewPair ?? (previewPlayer === null ? pair : null);
       const related = new Set(focusedPlayer ? [focusedPlayer] : []);
       for (const edge of edges) {
         const exact = edge.dataset.edge === focusedPair;
@@ -227,7 +229,7 @@
       update();
     });
     clear.addEventListener('click', () => {
-      player = pair = hovered = previewPair = null;
+      player = pair = hovered = keyboardPlayer = previewPair = null;
       update();
       focus.focus();
     });
@@ -260,11 +262,11 @@
         draw();
       });
       node.addEventListener('focus', () => {
-        hovered = name;
+        keyboardPlayer = name;
         draw();
       });
       node.addEventListener('blur', () => {
-        hovered = null;
+        keyboardPlayer = null;
         draw();
       });
     }
