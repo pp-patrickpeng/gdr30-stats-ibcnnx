@@ -1,0 +1,45 @@
+.pregame {
+  margin-bottom: 18px;
+  border-inline-start: 3px solid var(--accent);
+}
+.pregame h2 { margin: 5px 0 6px; }
+.pregame__summary { margin-top: 8px; }
+.pregame__report { margin-top: 12px; }
+.pregame__report > summary {
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: var(--r-sm);
+  background: var(--accent);
+  color: var(--accent-ink);
+  cursor: pointer;
+  font-weight: 700;
+}
+.pregame__report > summary:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+.pregame__body { margin-top: 18px; }
+.pregame__body h3 { margin: 22px 0 8px; font-size: 17px; }
+.pregame__body h4 { margin: 0 0 5px; font-size: 15px; }
+.pregame__metrics, .pregame__players, .pregame__films {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 205px), 1fr));
+  gap: 10px;
+}
+.pregame__metrics { margin: 0; }
+.pregame__metrics > div, .pregame__players > div, .pregame__films > div {
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--surface2);
+}
+.pregame__metrics dt { color: var(--muted); font-size: 13px; }
+.pregame__metrics dd { margin: 2px 0 0; font-size: clamp(21px, 3vw, 29px); font-weight: 800; }
+.pregame__actions, .pregame__films ul { padding-inline-start: 1.35em; }
+.pregame__actions { margin: 0; }
+.pregame__actions li + li, .pregame__films li + li { margin-top: 8px; }
+.pregame__films { margin-top: 10px; }
+.pregame__films a, .pregame__source a { display: inline-block; margin-inline-end: 12px; }
+.pregame__scores { width: 100%; border-collapse: collapse; margin-top: 6px; }
+.pregame__scores :is(th, td) { padding: 7px 8px; border-bottom: 1px solid var(--line); text-align: start; }
+.pregame__scores td, .pregame__scores th:not(:first-child) { text-align: end; }
+.pregame__scores tbody th { font-weight: 500; }
+.pregame__source { margin-top: 12px; }
