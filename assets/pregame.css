@@ -43,3 +43,22 @@
 .pregame__scores td, .pregame__scores th:not(:first-child) { text-align: end; }
 .pregame__scores tbody th { font-weight: 500; }
 .pregame__source { margin-top: 12px; }
+.pregame__highlights { margin-bottom: 24px; }
+.pregame__table-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-sm); }
+.pregame__table-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.pregame__highlight-table { width: 100%; min-width: 850px; border-collapse: separate; border-spacing: 0; font-variant-numeric: tabular-nums; }
+.pregame__highlight-table :is(th, td) { padding: 11px 10px; border-bottom: 1px solid var(--line); text-align: end; vertical-align: top; }
+.pregame__highlight-table thead th { background: var(--surface2); white-space: nowrap; font-size: 12px; }
+.pregame__highlight-table :is(tbody, tfoot) th { text-align: start; font-size: 13px; }
+.pregame__highlight-table th:first-child { position: sticky; left: 0; z-index: 1; min-width: 160px; background: var(--surface2); }
+.pregame__highlight-table tfoot :is(th, td) { font-weight: 800; border-bottom: 0; background: var(--surface2); }
+.pregame__jersey { display: block; color: var(--accent); font-weight: 800; }
+.pregame__highlight-total { font-weight: 800; color: var(--accent); }
+.pregame__empty { color: var(--muted); }
+.pregame__cell-detail summary { cursor: pointer; white-space: nowrap; color: var(--accent); font-weight: 700; }
+.pregame__cell-detail ul { list-style: none; padding: 0; margin: 8px 0 0; text-align: start; }
+.pregame__cell-detail li { margin-top: 5px; font-size: 12px; white-space: nowrap; }
+@media (max-width: 600px) {
+  .pregame__highlight-table th:first-child { min-width: 130px; max-width: 150px; }
+  .pregame__highlight-table :is(th, td) { padding: 10px 8px; }
+}
