@@ -1,0 +1,33 @@
+.insight-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 10px; }
+.insight-header h2 { margin: 0; font-size: 17px; }
+.insight-header label { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; }
+.insight-header select { min-height: 36px; max-width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; color: var(--text); background: var(--surface); font: inherit; }
+.insight-metrics { display: grid; gap: 8px; min-width: 0; }
+.insight-split__labels { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 8px; font-size: 12px; font-weight: 750; }
+.insight-split__labels span:first-child { color: color-mix(in srgb, var(--hot) 56%, var(--text)); }
+.insight-split__labels span:last-child { color: color-mix(in srgb, var(--good) 56%, var(--text)); }
+.insight-bar {
+  height: 12px;
+  border-radius: 999px;
+  margin-top: 5px;
+  background: linear-gradient(to right, var(--hot) var(--assisted), var(--good) var(--assisted));
+}
+.insight-tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.insight-tile.stile { display: grid; align-content: start; gap: 2px; min-width: 0; border-color: var(--line); }
+.insight-tile .sv { line-height: 1.2; }
+.insight-tile[data-low] .sv { color: var(--warn); }
+.insight-tip, .insight-method { color: var(--muted); font-size: 11px; }
+.insight-tip { margin: 0; line-height: 1.45; }
+.insight-profile { margin-bottom: 12px; }
+.insight-method { margin-top: 8px; }
+.insight-method summary { width: fit-content; cursor: pointer; text-underline-offset: 2px; }
+.insight-method p { margin: 5px 0 0; }
+@media (max-width: 360px) {
+  .topbar .wrap { gap: 8px; }
+  .topbar .logo { gap: 6px; }
+  .topbar .recpill { padding-inline: 6px; }
+  .topbar .langbtn { margin-inline-end: 0; padding-inline: 4px; white-space: nowrap; }
+  .pick { max-width: 100%; }
+  .pick span { flex-shrink: 0; }
+  .pick select { min-width: 0; }
+}
