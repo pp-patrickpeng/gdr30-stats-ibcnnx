@@ -3,7 +3,7 @@
   const currentPicker = pickers.find(p => p.hasAttribute('data-current-division'));
   function select(value){
     pickers.forEach(p=>p.value=value);
-    const badge=document.querySelector('.recpill');if(badge){badge.textContent=({b3:'B3 · 0–1',c1:'C1 · 4–0',all:'S2 · 4–1'})[value];badge.title=({b3:'U16 B3',c1:'U16 C1 grading',all:'Whole Season 2'})[value];}
+    const badge=document.querySelector('.recpill');if(badge){badge.textContent=({b3:'B3 · 1–1',c1:'C1 · 4–0',all:'S2 · 5–1'})[value];badge.title=({b3:'U16 B3',c1:'U16 C1 grading',all:'Whole Season 2'})[value];}
     document.querySelectorAll('[data-division-scope]').forEach(el=>{el.hidden=el.dataset.divisionScope!==value});
   }
   pickers.forEach(p=>p.addEventListener('change',()=>{
